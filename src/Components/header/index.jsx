@@ -1,25 +1,84 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 function Header() {
   return (
-    <header className='container mx-auto w-[1400px] flex items-center justify-between p-2 '>
-        <div className='relative w-[120px] h-[70px]'>
-           <Link href="/">
-                 <Image fill src="/Logo.svg"  alt="logo"/>
-           </Link>
+    <header className="w-full bg-white shadow-sm py-4">
+      <div className="container max-w-[1200px] mx-auto px-2  flex items-center justify-between">
+        
+        {/* Logo */}
+        <div className="relative w-[120px] h-[60px]">
+          <Link href="/">
+            <Image
+              src="/Logo.svg"
+              alt="logo"
+              fill
+              sizes="(max-width: 768px) 80px, 120px"
+              priority
+              className="object-contain"
+            />
+          </Link>
         </div>
-        <nav className='flex gap-[30px]  text-gray-500'>
-            <Link className=' font-bold text-[18px] hover:text-blue-950' href="/about">About Us</Link>
-            <Link className=' font-bold text-[18px] hover:text-blue-950' href="/careers">Careers</Link>
-            <Link className=' font-bold text-[18px] hover:text-blue-950' href="/blog">Blog</Link>
-            <Link className=' font-bold text-[18px] hover:text-blue-950' href="/service">Cervise</Link>
-            <Link className=' font-bold text-[18px] hover:text-blue-950' href="/contact">Contact us</Link>
+
+        {/* Navigation */}
+        <nav className="hidden md:block">
+          <ul className="flex gap-8 text-gray-600">
+            <li>
+              <Link
+                className="font-semibold text-[16px] hover:text-blue-900 transition"
+                href="/about"
+              >
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="font-semibold text-[16px] hover:text-blue-900 transition"
+                href="/careers"
+              >
+                Careers
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="font-semibold text-[16px] hover:text-blue-900 transition"
+                href="/blog"
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="font-semibold text-[16px] hover:text-blue-900 transition"
+                href="/service"
+              >
+                Service
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="font-semibold text-[16px] hover:text-blue-900 transition"
+                href="/contact"
+              >
+                Contact Us
+              </Link>
+            </li>
+          </ul>
         </nav>
-        <button className='bg-pink-50 text-orange-400  font-bold text-[18px] rounded-full px-4 py-2 hover:bg-orange-200 '>Clone project</button>
+
+        {/* Button */}
+        <button
+          type="button"
+          className="hidden sm:inline-block bg-pink-100 text-orange-500 font-semibold text-[16px] rounded-full px-5 py-2 hover:bg-orange-200 transition"
+        >
+          Clone Project
+        </button>
+      </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

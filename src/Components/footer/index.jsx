@@ -7,8 +7,8 @@ import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#00204D] text-white px-3 md:px-20 py-10">
-      <div className="container mx-auto max-w-[1400px] ">
+    <footer className="bg-[#00204D] text-white px-3 md:py-10">
+      <div className="container mx-auto max-w-[1200px] items-center ">
         <div className='grid grid-cols-1 md:grid-cols-4 gap-10'>
           {/* Logo and description */}
           <div>
@@ -28,7 +28,7 @@ export default function Footer() {
 
           {/* Company links */}
           <div>
-            <h3 className="font-semibold mb-3">Company</h3>
+            <h3 className="font-semibold pt-4 mb-3">Company</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li><Link href="/about">About Us</Link></li>
               <li><Link href="/careers">Careers</Link></li>
@@ -39,7 +39,7 @@ export default function Footer() {
 
           {/* Contact info */}
           <div>
-            <h3 className="font-semibold mb-3">Connect</h3>
+            <h3 className="font-semibold pt-4 mb-3">Connect</h3>
             <ul className="text-sm text-gray-300 space-y-2">
               <li><a href="mailto:hi@finsweet.com">hi@finsweet.com</a></li>
               <li><a href="tel:+1234567890">+(123) 456-7890</a></li>
@@ -48,7 +48,7 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="font-semibold mb-3">Join Newsletter</h3>
+            <h3 className="font-semibold pt-4 mb-3">Join Newsletter</h3>
             <form className="flex flex-col space-y-3">
               <input
                 type="email"

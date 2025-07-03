@@ -3,11 +3,13 @@ import Image from "next/image";
 
 function HomePage() {
   return (
-    <section className="bg-[#e6f0f8] py-16">
-      <div className="container mx-auto max-w-[1400px] px-3 flex flex-col-reverse lg:flex-row items-center justify-between">
+   <main>
+
+    <section className="bg-[#e6f0f8] w-full py-10">
+      <div className="container mx-auto max-w-[1200px] px-3 flex flex-col-reverse lg:flex-row items-center justify-between">
     
         <div className="lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#1e293b] leading-tight">
+          <h1 className="text-4xl md:text-5xl font-semibold text-[#1e293b] leading-tight">
             Prosper with our <br />
             <span className="text-[#0f172a]">bespoke solutions</span>
           </h1>
@@ -47,6 +49,15 @@ function HomePage() {
           </div>
       </div>
     </section>
+
+    <section className='container mx-auto max-w-[1200px] px-3 py-15'>
+      <h2 className='text-3xl md:text-4xl font-semibold text-[#1e293b] leading-tight w-md mb-2 '>We help more than 1500  companies from all sectors</h2>
+      <p className='mt-4 text-gray-500 max-w-md mx-auto lg:mx-0 mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, mattis purus. Vivamus commodo suscipit tellus et pellentesque.</p>
+      <div>
+        
+      </div>
+    </section>
+   </main>
   )
 }
 
